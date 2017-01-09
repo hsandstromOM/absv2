@@ -1,0 +1,145 @@
+.honeyCombRowOfFour {
+ width:100%;
+ margin-top:-70px;
+ display:block;
+ float:left;
+ text-align:center;
+}
+.honeyCombRowOfThree {
+ width:100%;
+ margin-top:-65px;
+ display:block;
+ float:left;
+ margin-left: 150px;
+}
+.honeyComb {
+  display: inline-block;
+  position: relative;
+  width: 280px !important;
+  height: 316px !important;
+  margin-right: 20px;
+}
+.honeyComb:hover {
+  .overlayer {
+    opacity: 0;
+
+  }
+}
+.honeyCombHome {
+  display: inline-block;
+  position: relative;
+  width: 253px !important;
+  height: 284px !important;
+  //margin-right: 5px;
+}
+.honeyCombHome:hover {
+  .overlayer {
+    opacity: 0;
+
+  }
+}
+.honeyCombHome p {
+  font-family: "aaux-next", sans-serif;
+  font-size: 18px;
+  position: absolute;
+  top: 40%;
+  left:25%;
+  right:15%;
+  letter-spacing: .5px;
+  z-index: 1000;
+}
+.overlayer {
+  opacity: 1;
+  position: absolute;
+}
+.fourRow {
+  margin-top: -70px !important;
+}
+.threeRow {
+  margin-left: 0px !important;
+  margin-top: -70px !important;
+}
+.threeRowStart {
+  margin-left: 120px !important;
+  margin-top: -70px !important;
+}
+@media (max-width: 992px){
+  .honeyCombContainer{
+    width:100% !important;
+  }
+
+  .honeyCombRowOfFour{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+
+  .honeyCombRowOfThree{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .threeRowStart{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .threeRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .fourRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+
+  .hexText{
+    height: auto !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+    position: absolute;
+    text-align: center;
+    top: 41% !important;
+  }
+}
+@media (max-width:895px){
+  .gallery-text{
+    margin-top:-35px !important;
+  }
+}
+@media (max-width: 776px){
+  .honeyCombRowOfFour{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+
+  .honeyCombRowOfThree{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .honeycombContainer{
+    width:100%;
+  }
+  .gallery-text{
+    margin-top:-25px !important;
+  }
+  .threeRowStart{
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .threeRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+  .fourRow {
+    margin:auto !important;
+    text-align:center;
+    width:100%;
+  }
+}

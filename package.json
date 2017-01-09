@@ -1,0 +1,52 @@
+{
+  "name": "absjs",
+  "version": "1.0.0",
+  "engines": {
+    "node": "0.12.4"
+  },
+  "description": "## Overview An effective marketing website offering easily managed content updates.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js & ./node_modules/.bin/node-sass ./assets/css/styles.scss ./assets/css/styles.css -w & ./node_modules/.bin/watchify ./app/app.module.js -o bundle.js",
+    "bundle": "browserify -e ./app/app.module.js -o bundle.js",
+    "watch": "watchify -e ./app/app.module.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsandstromOM/absv2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-animate": "^1.5.8",
+    "angular-bootstrap": "^0.12.2",
+    "angular-contentful": "^2.0.0",
+    "angular-marked": "^1.2.1",
+    "angular-resource": "^1.5.8",
+    "angular-sanitize": "^1.5.6",
+    "angular-slugify": "^1.0.3",
+    "angular-ui-router": "^0.3.1",
+    "angular-utils-pagination": "^0.11.1",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.6",
+    "bower": "^1.7.9",
+    "browserify": "^13.0.1",
+    "express": "^4.13.4",
+    "express-redirect": "^1.2.2",
+    "grunt": "^1.0.1",
+    "jquery": "^2.2.4",
+    "ng-sanitize": "0.0.2",
+    "node-sass": "^3.7.0",
+    "nodemailer": "^0.7.1",
+    "normalize": "^0.3.1",
+    "serve": "^1.4.0",
+    "watchify": "^3.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/hsandstromOM/absv2/issues"
+  },
+  "homepage": "https://github.com/hsandstromOM/absv2#readme",
+  "devDependencies": {}
+}

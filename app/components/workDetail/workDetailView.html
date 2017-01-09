@@ -1,0 +1,345 @@
+<div class="page-container">
+    <div data-navheader="" data-mainpage="mainPage" data-slide="slide" class="ng-isolate-scope">
+        <div>
+            <div id="bloc-0" class="bloc bgc-white l-bloc navBig">
+                <div class="container bloc-sm">
+                    <nav class="navbar navbar-default navbar-fixed-top navShadow" data-ng-class="slide.workNav ? 'navShadow' : 'noShadow' || slide.serviceNav ? 'navShadow' : 'noShadow' || slide.teamNav ? 'navShadow' : 'noShadow'" style="background-color: white;">
+                        <div class="navbar-header">
+                            <div class="navbar-brand" data-ui-sref="home" style="padding-left: 5vh; height: 180px;" href="/"><img src="img/ABS_logo.png" alt="logo" width="247" style="cursor: pointer; text-align: center; padding-top: 20px; padding-bottom: 20px;"></div>
+                        </div>
+                        <div class="navbar-collapse navbar-1 collapse hidden-md" style="box-shadow: rgba(0, 0, 0, 0.34902) 1.5px 2.598px 27px 0px;">
+                            <ul class="site-navigation nav navbar-nav" style="border-top: none;">
+                                <li style="padding-right: 2vh; text-align: center;">
+                                    <div id="team" class="tk-industry customText nonSelectedBlue" data-ui-sref="team" data-ng-class="mainPage === 'team' ? 'selectedGreen' : 'nonSelectedBlue'" style="cursor: pointer; font-size: 18px; font-weight: normal; line-height: 21px; padding-top: 15px; padding-bottom: 15px;"
+                                        href="/team">TEAM</div>
+                        </li>
+                        <li style="padding-right: 2vh; text-align: center;">
+                            <div id="work" class="tk-industry customText nonSelectedBlue" data-ui-sref="work({service: defaultWorkService})" data-ng-click="setWorkService()" data-ng-class="mainPage === 'work' ? 'selectedGreen' : 'nonSelectedBlue'" style="cursor: pointer; font-size: 18px; font-weight: normal; line-height: 21px; padding-top: 15px; padding-bottom: 15px;"
+                                href="/work">WORK</div>
+                </li>
+                <li style="padding-right: 2vh; text-align: center;">
+                    <div id="services" class="tk-industry customText nonSelectedBlue" data-ng-click="setSelectedService()" data-ui-sref="services()" data-ng-class="mainPage === 'services' ? 'selectedGreen' : 'nonSelectedBlue'" style="cursor: pointer; font-size: 18px; font-weight: normal; line-height: 21px; padding-top: 15px; padding-bottom: 15px;"
+                        href="/services">SERVICES</div>
+            </li>
+            <li style="padding-right: 2vh; text-align: center; padding-top: 10px; padding-bottom: 10px;">
+                <a class="tk-industry blueContact" data-ui-sref="contact" data-ng-class="page === 'contact' ? 'greenContact' : 'blueContact'" style="color: white; line-height: 21px; font-weight: bold; margin: auto; width: 180px; text-align: center; padding-top: 5px; padding-bottom: 5px;"
+                    href="/contact">CONTACT</a>
+            </li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+</div>
+<nav class="navbar navbar-default navSmall" style="z-index: 20; display: none; padding-top: 10px;">
+    <div class="container-fluid">
+        <div class="navbar-header"><button class="navbar-toggle" data-toggle="collapse" data-target="#toggleNav"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <div class="navbar-brand"
+                data-ui-sref="home" href="/"><img src="img/ABS_logo.png" alt="logo" width="247" style="cursor: pointer;"></div>
+    </div>
+    <div class="collapse navbar-collapse" id="toggleNav" style="height: 100% !important;">
+        <ul class="nav navbar-nav" style="box-shadow: rgba(0, 0, 0, 0.34902) 1.5px 2.598px 27px 0px inset; margin-top: -4px; height: 100vh; border-top-style: none;">
+            <li class="dropdown" style="text-align: center;">
+                <p data-ng-class="mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'" data-ng-click="teamDropClosed = !teamDropClosed; workDropClosed = true; serviceDropClosed = true" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px;"
+                    class="ltc-royal-blue-traditional">TEAM</p>
+            </li>
+            <ul class="dropMenu ng-hide" data-ng-hide="teamDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 80px; padding-left: 0px; text-align: center; width: 100%;">
+                <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; width: 100%;">
+                    <div data-ui-sref="team" style="cursor: pointer; border-bottom: 1px solid white; padding-top: 15px; padding-bottom: 20px; width: 300px; color: white;" href="/team">ARCHITECTURE</div>
+                </li>
+                <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; width: 100%;">
+                    <div style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; width: 300px; color: white;">
+                        <div data-ui-sref="team({division: 'Forensic Consulting'})" href="/team">FORENSIC CONSULTING</div>
+                    </div>
+                </li>
+                <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; width: 100%;">
+                    <div data-ui-sref="team({division: 'Building Enclosure'})" style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; width: 300px; color: white;" href="/team">BUILDING ENCLOSURE</div>
+                </li>
+                <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; width: 100%;">
+                    <div data-ui-sref="team({division: 'Life Safety &amp; Human Factors'})" style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; width: 300px; color: white;" href="/team">LIFE SAFETY &amp; HUMAN FACTORS</div>
+                </li>
+                <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; width: 100%;">
+                    <div data-ui-sref="team({division: 'Engineering'})" style="cursor: pointer; padding-bottom: 20px; width: 300px; color: white;" href="/team">ENGINEERING</div>
+                </li>
+            </ul>
+            <li class="dropdown" style="text-align: center;">
+                <p data-ng-click="workDropClosed = !workDropClosed; teamDropClosed = true; serviceDropClosed = true" data-ng-class="mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px;"
+                    class="ltc-royal-blue-traditional">WORK</p>
+            </li>
+            <ul class="dropMenu ng-hide" data-ng-hide="workDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 160px; padding-left: 0px; text-align: center; width: 100%;">
+                <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; width: 100%;">
+                    <!-- ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+                    <div data-ng-repeat="serviceProvided in allWorkServicesProvided | limitTo:3" data-ui-sref="work({service: serviceProvided})" style="border-bottom: 1px solid white; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope"
+                        href="/work">ARCHITECTURE</div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+    <div data-ng-repeat="serviceProvided in allWorkServicesProvided | limitTo:3" data-ui-sref="work({service: serviceProvided})" style="border-bottom: 1px solid white; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope" href="/work">FORENSIC CONSULTING</div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+    <div data-ng-repeat="serviceProvided in allWorkServicesProvided | limitTo:3" data-ui-sref="work({service: serviceProvided})" style="border-bottom: 1px solid white; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope" href="/work">BUILDING ENCLOSURE</div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+    </li>
+    </ul>
+    <li class="dropdown" style="text-align: center;">
+        <p data-ng-click="serviceDropClosed = !serviceDropClosed; workDropClosed = true; teamDropClosed = true" data-ng-class="mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px;"
+            class="ltc-royal-blue-traditional">SERVICES</p>
+    </li>
+    <ul class="dropMenu ng-hide" data-ng-hide="serviceDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 260px; padding-left: 0px; text-align: center; width: 100%;">
+        <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; width: 100%;">
+            <!-- ngRepeat: service in allServices -->
+            <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope" href="/services">ARCHITECTURE</div>
+            <!-- end ngRepeat: service in allServices -->
+            <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope" href="/services">FORENSIC CONSULTING</div>
+            <!-- end ngRepeat: service in allServices -->
+            <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope" href="/services">BUILDING ENCLOSURE</div>
+            <!-- end ngRepeat: service in allServices -->
+            <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope" href="/services">LIFE SAFETY &amp; HUMAN FACTORS</div>
+            <!-- end ngRepeat: service in allServices -->
+            <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; width: 300px; color: white;" class="ng-binding ng-scope" href="/services">ENGINEERING</div>
+            <!-- end ngRepeat: service in allServices -->
+        </li>
+    </ul>
+    <li style="margin-right: 10px;">
+        <a data-ui-sref="contact" data-ng-class="page === 'contact' ? 'greenContact' : 'blueContact'" style="color: white; line-height: 5px; font-weight: bold; margin: auto; width: 140px; text-align: center; padding-top: 15px; padding-bottom: 15px;" href="/contact"
+            class="blueContact">CONTACT</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+</nav>
+<div class="row subnav-navigation subnavbar slideNav slideNavDown" id="workNav" data-ng-class="slide.workNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+    <!-- ngRepeat: serviceProvided in allWorkServicesProvided -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" style="border-left: none; border-right: 1px solid white; width: 33.3%; display: inline-block !important;">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" class="ng-binding greenNav" href="/work">ARCHITECTURE</div>
+    </div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" style="border-left: none; border-right: 1px solid white; width: 33.3%; display: inline-block !important;">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" class="ng-binding clearNav" href="/work">FORENSIC CONSULTING</div>
+    </div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" style="border-left: none; border-right: 1px solid white; width: 33.3%; display: inline-block !important;">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" class="ng-binding clearNav" href="/work">BUILDING ENCLOSURE</div>
+    </div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" style="border-left: none; border-right: 1px solid white; width: 33.3%; display: inline-block !important;">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" class="ng-binding clearNav" href="/work">LIFE SAFETY &amp; HUMAN FACTORS</div>
+    </div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" style="border-left: none; border-right: 1px solid white; width: 33.3%; display: inline-block !important;">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" class="ng-binding clearNav" href="/work">ENGINEERING</div>
+    </div>
+    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+</div>
+<div class="row subnav-navigation subnavbar slideNav slideNavUp" id="serviceNav" data-ng-class="slide.serviceNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+    <!-- ngRepeat: service in allServices -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" class="ng-binding clearNav" href="/services">ARCHITECTURE</div>
+    </div>
+    <!-- end ngRepeat: service in allServices -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" class="ng-binding clearNav" href="/services">FORENSIC CONSULTING</div>
+    </div>
+    <!-- end ngRepeat: service in allServices -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" class="ng-binding clearNav" href="/services">BUILDING ENCLOSURE</div>
+    </div>
+    <!-- end ngRepeat: service in allServices -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" class="ng-binding greenNav" href="/services">LIFE SAFETY &amp; HUMAN FACTORS</div>
+    </div>
+    <!-- end ngRepeat: service in allServices -->
+    <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" class="ng-binding clearNav" href="/services">ENGINEERING</div>
+    </div>
+    <!-- end ngRepeat: service in allServices -->
+</div>
+<div class="row subnav-navigation subnavbar slideNav slideNavUp" id="teamNav" data-ng-class="slide.teamNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+    <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ng-click="setDivision('Architecture')" data-ui-sref="team({division: 'Architecture'})" data-ng-class="headerDivision.current === 'ARCHITECTURE' ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" href="/team" class="clearNav">ARCHITECTURE</div>
+    </div>
+    <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ng-click="setDivision('Forensic Consulting')" data-ui-sref="team({division: 'Forensic Consulting'})" data-ng-class="headerDivision.current === 'Forensic Consulting' ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" href="/team"
+            class="clearNav">FORENSIC CONSULTING</div>
+</div>
+<div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+    <div data-ng-click="setDivision('Building Enclosure')" data-ui-sref="team({division: 'Building Enclosure'})" data-ng-class="headerDivision.current === 'Building Enclosure' ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white;" href="/team"
+        class="clearNav">BUILDING ENCLOSURE</div>
+</div>
+<div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+    <div data-ng-click="setDivision('Life Safety &amp; Human Factors')" data-ui-sref="team({division: 'Life Safety &amp; Human Factors'})" data-ng-class="headerDivision.current === 'Life Safety &amp; Human Factors' ? 'greenNav' : 'clearNav'" href="/team"
+        class="clearNav">LIFE SAFETY &amp; HUMAN FACTORS</div>
+</div>
+<div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+    <div data-ng-click="setDivision('Engineering')" data-ui-sref="team({division: 'Engineering'})" data-ng-class="headerDivision.current === 'Engineering' ? 'greenNav' : 'clearNav'" href="/team" class="clearNav">ENGINEERING</div>
+</div>
+</div>
+</div>
+</div>
+<div id="bloc-1" class="bloc bgc-white bg-Header-Placeholder d-bloc" style="max-height: 75vh;"><img class="honeycomb-left" src="img/honeycomb_pattern.png" style="max-height: 310px; z-index: 1; margin-left: -50px !important;"><img class="honeycomb-right" src="img/honeycomb.png" style="max-height: 400px; z-index: 1; margin-right: -50px !important;">
+    <div
+        class="row">
+        <div class="col-sm-12" style="margin-top: -160px; text-transform: uppercase;">
+            <h4 class="mg-md tc-white text-center ng-binding">WORK/ARCHITECTURE:</h4>
+            <h1 class="mg-md tc-white text-center ng-binding">711 East Arctic Avenue, Folly Beach, SC</h1></div>
+    </div>
+</div>
+<div id="bloc-2" class="bloc bg-Halftone-Pattern tc-prussian-blue bgc-white" style="padding-top: 95px; background-color: rgb(246, 246, 246); box-shadow: rgba(0, 0, 0, 0.0470588) 0px -3px 8px 4px inset;">
+    <div class="container bloc-lg">
+        <div class="hexagon row">
+            <div class="col-md-4 col-cd-offset-1 col-xs-12">
+                <div id="over"><span class="Centerer"></span><img class="Centered" src="img/doubleHoney.png" style="margin-top: -185px;">
+                    <div class="gallery-text" style="margin-top: -30px;"><img src="img/contact_icon.png">
+                        <h4 class="hextitle">INTERESTED IN<br>WORKING TOGETHER?</h4>
+                        <h5 class="hexname tk-aaux-next">SCOTT A. HARVEY,</h5>
+                        <p>AIA, RWC, LEED AP</p>
+                        <p style="margin-bottom: 5px;">Registered Architect</p><a class="tk-aaux-next">EMAIL SCOTT</a></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 ng-isolate-scope" data-marked="workProject.fields.description">
+                <p>This beautiful beachfront, five-bedroom custom vacation residence is located on Folly Beach, SC. ABS designed the residence to take advantage of the stunning ocean views in four of the five bedrooms, while also incorporating several outdoor
+                    living areas and a large rooftop deck. </p>
+            </div>
+            <div class="container"><br>
+                <div class="col-md-12"><br><br>
+                    <div class="well" style="border: none; border-radius: 0px; box-shadow: none;">
+                        <div id="myCarousel" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/rqbVAsVucC8aK6MaUGU0k/32bd3518b4ffd943e4a89aa596acd77d/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_13.jpg" alt="Image" style="height: 200px; width: 220px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/1So0Wu0w6c2Sc60IGCKSO8/4d3e1731b551e4ce1f96919f451c9a3e/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_12.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/6f4zDMagfuosU80w8agI06/ed15437be30d9a69636657a9e0f23652/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_11.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/6w89uD4Aa4segwAy68AmQe/48a589e34e5728bd03093a4e04bd0c79/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_9.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/6AGaAD0SGWCYemMuMqUyoQ/b7d52dcf2546b1c60debeb0ecbda1932/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_7.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/4G7GXxJziokaSYcIAYAqWc/691a8b19405b0f282616296964df6133/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_8.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/UYjR7VNLeSeMY2qEYKWQ0/f20a49706e3a4567fe4876b7a00c28ab/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_10.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/69m1UR2uukAyYkwk4UykiW/9f31b92d399e909260ac5ec49ebb232f/ABS-Work-711_East_Artic_Folly_Beach-Interior-155724.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/4C6hiBHoUEws2o2ciEU0ye/bc63e8c5975c862319ea29c7152cf5cd/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_3.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/5fK6yw0g7Sm6qOs4IEQGmw/3dd2f8ac4b9e6231746ae333cca1a6c1/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_4.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/7FLG4lzpW8yiQ8IMqQ0aW0/0afe1a8abad7e4f335b1819db5b0a229/ABS-Work-711_East_Artic_Folly_Beach-Exteriors_2.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="#x"><img class="img-responsive" src="//images.contentful.com/lxejsmju70ex/1biC1ekXSeqwSeSEumQ6YQ/bcedbb14580a876fea7f8d1edf5dce9c/ABS-Work-711_East_Artic_Folly_Beach-Interior-155746.jpg" alt="Image" style="height: 200px; width: 230px;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><a class="left carousel-control" href="#myCarousel" data-slide="prev" style="margin-left: -50px; background-color: grey; width: 40px; background-image: none;"><h3 style="color: white;">‹</h3></a>
+                            <a class="right carousel-control"
+                                href="#myCarousel" data-slide="next" style="margin-right: -50px; background-color: grey; width: 40px; background-image: none;">
+                                <h3 style="color: white; padding-top: 80px;">›</h3></a>
+                                <div class="div modal fade" id="workModal">
+                                    <div class="donateModal" style="width: 100%; margin: 0px auto;">
+                                        <div class="modalBody" style="display: block; float: left; padding: 20px; width: 100%; background-color: white;">
+                                            <div class="carouselHero" style="display: block; float: left; width: 100%;">
+                                                <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" data-active="active" data-interval="myInterval">
+                                                    <div class="carousel-inner" ng-transclude="">
+                                                        <!-- ngRepeat: slide in gallery track by $index -->
+                                                    </div>
+                                                    <a role="button" href="" class="left carousel-control ng-hide" ng-click="prev()" ng-class="{ disabled: isPrevDisabled() }" ng-show="slides.length > 1">
+                                                        <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+                                                        <span class="sr-only">previous</span>
+                                                    </a>
+                                                    <a role="button" href="" class="right carousel-control ng-hide" ng-click="next()" ng-class="{ disabled: isNextDisabled() }" ng-show="slides.length > 1">
+                                                        <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+                                                        <span class="sr-only">next</span>
+                                                    </a>
+                                                    <ol class="carousel-indicators ng-hide" ng-show="slides.length > 1">
+                                                        <!-- ngRepeat: slide in slides | orderBy:indexOfSlide track by $index -->
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br></div>
+    </div>
+</div>
+<div data-footermenu="" class="ng-isolate-scope">
+    <div><a class="bloc-button btn btn-d scrollToTop" href="#top"><span class="fa fa-chevron-up"></span></a>
+        <div class="bloc-group">
+            <div id="bloc-16" class="bloc bloc-tile-3 bgc-white l-bloc">
+                <div class="container bloc-md">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h6 class="mg-md" data-ui-sref="contact" style="cursor: pointer;" href="/contact">APPLIED BUILDING SCIENCES, INC. | CONTACT US</h6>
+                            <div class="row" style="padding-top: 20px;">
+                                <div class="col-sm-3">
+                                    <h6 class="mg-md" data-ui-sref="home" style="cursor: pointer;" href="/">HOME</h6></div>
+                                <div class="col-sm-3">
+                                    <h6 class="mg-md" data-ui-sref="team" style="cursor: pointer;" href="/team">TEAM</h6></div>
+                                <div class="col-sm-3">
+                                    <h6 class="mg-md" data-ui-sref="work" style="cursor: pointer;" href="/work">WORK</h6>
+                                    <!-- ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="work({service: serviceProvided})" data-ng-repeat="serviceProvided in allWorkServicesProvided | limitTo:3" style="cursor: pointer;" href="/work">BUILDING ENCLOSURE</h5>
+                                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="work({service: serviceProvided})" data-ng-repeat="serviceProvided in allWorkServicesProvided | limitTo:3" style="cursor: pointer;" href="/work">ARCHITECTURE</h5>
+                                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="work({service: serviceProvided})" data-ng-repeat="serviceProvided in allWorkServicesProvided | limitTo:3" style="cursor: pointer;" href="/work">ENGINEERING</h5>
+                                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided | limitTo:3 -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <h6 class="mg-md" data-ui-sref="services" style="cursor: pointer;" href="/services">SERVICES</h6>
+                                    <!-- ngRepeat: service in allServices -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="cursor: pointer;" href="/services">LIFE SAFETY &amp; HUMAN FACTORS</h5>
+                                    <!-- end ngRepeat: service in allServices -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="cursor: pointer;" href="/services">ARCHITECTURE</h5>
+                                    <!-- end ngRepeat: service in allServices -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="cursor: pointer;" href="/services">FORENSIC CONSULTING</h5>
+                                    <!-- end ngRepeat: service in allServices -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="cursor: pointer;" href="/services">ENGINEERING</h5>
+                                    <!-- end ngRepeat: service in allServices -->
+                                    <h5 class="mg-md tk-aaux-next ng-binding ng-scope" data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="cursor: pointer;" href="/services">BUILDING ENCLOSURE</h5>
+                                    <!-- end ngRepeat: service in allServices -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bloc-17" class="bloc l-bloc bgc-white bloc-tile-3">
+                <div class="container bloc-md">
+                    <div class="row">
+                        <div class="col-sm-12"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="bloc-18" class="bloc bloc-tile-3 bgc-white l-bloc">
+                <div class="container bloc-md">
+                    <div class="row">
+                        <div class="col-sm-12"><img src="img/ABS_footer_logo.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
